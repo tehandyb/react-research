@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ProductCard from './ProductCard';
-// import 'cap-ui/src/sass/index.scss';
+import nElements from '../numberOfTestElements';
 
 const product = {
   productId: 1238,
@@ -15,7 +15,15 @@ const product = {
 
 class App extends Component {
   render() {
-    return <ProductCard product={product}/>;
+    const testElements = [];
+    for(let i = 0; i < nElements; i ++) {
+      testElements.push(<ProductCard product={product}/>)
+    }
+    return (
+      <React.Fragment>
+        {testElements}
+      </React.Fragment>
+    );
   }
 }
 
