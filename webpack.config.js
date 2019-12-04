@@ -16,6 +16,12 @@ module.exports = {
   },
   module: {
     rules: [
+      // We use raw-loader to load css as a string from cap-ui into inject_global
+      // from styled-components
+      {
+        test: /\.css$/,
+        use: 'raw-loader',
+      },
       {
         test: /\.jsx?$/,
         /* We'll leave npm packages as is and not 
@@ -31,6 +37,17 @@ module.exports = {
         }
       },
       {
+        test: /\.(png|jp(e*)g|svg|gif)/,
+        exclude: /node_modules\/(?!cap-ui)/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8000, // Convert images < 8kb to base64 strings
+            name: 'images/[name]-[hash].[ext]',
+          },
+        }],
+      },
+      {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       }
@@ -39,12 +56,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       chunks: ['newCssApproach'],
-      template: path.join(__dirname, 'public', 'newCssApproach.html'),
+      template: path.join(__dirname, 'templates', 'newCssApproach.html'),
       filename: 'newCssApproach.html'
     }),
     new HtmlWebpackPlugin({
       chunks: ['oldStyledComponentsApproach'],
-      template: path.join(__dirname, 'public', 'oldStyledComponentsApproach.html'),
+      template: path.join(__dirname, 'templates', 'oldStyledComponentsApproach.html'),
       filename: 'oldStyledComponentsApproach.html'
     }),
   ]
