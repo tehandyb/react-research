@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import 'cap-ui/src/sass/index.scss';
 
 if (module.hot) {
   module.hot.accept();

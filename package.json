@@ -14,6 +14,7 @@
     "babel-loader": "^7.1.5",
     "babel-plugin-styled-components": "~1.8.0",
     "babel-preset-airbnb": "^2.5.3",
+    "css-loader": "^3.2.1",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
@@ -23,8 +24,9 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "styled-components": "^3.4.2",
+    "cap-ui": "git+ssh://git@github.com/tehandyb/cap-ui.git#andrew-cap-194-sass-build",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "styled-components": "^3.4.2"
   }
 }
