@@ -11,47 +11,11 @@ import { Heading, thm } from 'cap-ui';
 // This is a barebones version of the CapUI src/components/molecules/ProductCard/DesktopProductCard.js
 // This will not include anything that is not currently in the early version of the design token utility classes.
 // This is an effort to do an apples to apples performance comparison.
-
-const ProductCardHeaderContainer = styled.div`
-  display: flex;
-  align-items: center;
-  padding: ${thm.sizeUnits(3)} ${thm.sizeUnits(3)} 0px ${thm.sizeUnits(3)};
-`;
-
-const ProductCardHeaderDetails = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-`;
-
-const ProductCardInfo = styled.div`
-  background: ${thm.blankBackgroundColor};
-  border-style: solid;
-  border-width: 1px;
-  border-color: ${thm.imagePlaceholderColor};
-  height: 100%;
-`;
+import '../productCardUtilityClasses.scss';
 
 const ProductCardDescription = styled.div`
   padding: ${thm.sizeUnits(3)};
 `;
-
-const ProductCardHeader = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-`;
-
-const ProductCardHeaderBasicInfo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: ${thm.sizeUnits(1)};
-`;
-
-const StarRatingContainer = styled.div`
-  margin-right: ${thm.sizeUnits(4)};
-`;
-
 
 const ProductHeader = styled(Heading)`
   font-size: ${thm.fontSizes.gamma};
@@ -59,39 +23,30 @@ const ProductHeader = styled(Heading)`
   font-weight: normal;
 `;
 
-const ProductThumbNailContainer = styled.div`
-  padding-right: ${thm.sizeUnits(3)};
-`;
-
-const ButtonContainer = styled.div`
-  flex: 0 0 44%;
-  text-align: right;
-`;
-
 const DesktopProductCard = ({ product }) => {
   const productUrl = `/p/${product.productId}/${product.slug}`;
 
   return (
-    <ProductCardInfo>
-      <ProductCardHeaderContainer>
-        <ProductThumbNailContainer>
+    <div className="background-light light-border full-height">
+      <div className="flex align-items-center padding-top-24 padding-right-24 padding-left-24">
+        <div className="padding-right-24">
           {/* <Thumbnail src={product.logoUrl} size="extra-large" href={productUrl} /> */}
           <div>Thumbnail</div>
-        </ProductThumbNailContainer>
-        <ProductCardHeader>
-          <ProductCardHeaderBasicInfo>
-            <ProductHeader level={3}>
+        </div>
+        <div className="flex full-width flex-column">
+          <div className="flex space-between padding-bottom-8">
+            <div className="gamma-header margin-top-8 margin-bottom-8">
               {/* <Link href={productUrl}>{product.name}</Link> */}
               <div>{product.name}</div>
-            </ProductHeader>
-            <ButtonContainer>
+            </div>
+            <div>
               {/* <Button href={productUrl}>View Profile</Button> */}
               <div>View Profile</div>
-            </ButtonContainer>
-          </ProductCardHeaderBasicInfo>
+            </div>
+          </div>
 
-          <ProductCardHeaderDetails>
-            <StarRatingContainer>
+          <div className="flex wrap align-items-center">
+            <div className="margin-right-32">
               {/* <StarRating
                 rating={product.overallRating}
                 showRatingValue
@@ -99,18 +54,18 @@ const DesktopProductCard = ({ product }) => {
                 href={`${productUrl}/#reviews`}
               /> */}
               <div>Rating: {product.overallRating}</div>
-            </StarRatingContainer>
+            </div>
 
             {/* <Link href={`https://reviews.capterra.com/new/${product.productId}`}>Write a Review!</Link> */}
             <div>Write a Review!</div>
-          </ProductCardHeaderDetails>
-        </ProductCardHeader>
-      </ProductCardHeaderContainer>
+          </div>
+        </div>
+      </div>
 
-      <ProductCardDescription>
+      <div className="padding-top-24 padding-right-24 padding-bottom-24 padding-left-24">
         <b>Details:</b> {product.longDescription}
-      </ProductCardDescription>
-    </ProductCardInfo>
+      </div>
+    </div>
   );
 };
 

@@ -84,10 +84,10 @@ const DesktopProductCard = ({ product }) => {
               {/* <Link href={productUrl}>{product.name}</Link> */}
               <div>{product.name}</div>
             </ProductHeader>
-            <ButtonContainer>
+            <div>
               {/* <Button href={productUrl}>View Profile</Button> */}
               <div>View Profile</div>
-            </ButtonContainer>
+            </div>
           </ProductCardHeaderBasicInfo>
 
           <ProductCardHeaderDetails>

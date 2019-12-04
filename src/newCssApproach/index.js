@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ProductCard from './ProductCard';
+// import 'cap-ui/src/sass/index.scss';
 
 const product = {
   productId: 1238,
