@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 // import thm from '../../../theme';
-import { Heading, thm } from 'cap-ui';
+// import { thm } from 'cap-ui';
 // import Link from '../../atoms/Link';
 // import Button from '../../atoms/Button';
 // import Thumbnail from '../../atoms/Thumbnail';
@@ -12,16 +12,6 @@ import { Heading, thm } from 'cap-ui';
 // This will not include anything that is not currently in the early version of the design token utility classes.
 // This is an effort to do an apples to apples performance comparison.
 import '../productCardUtilityClasses.scss';
-
-const ProductCardDescription = styled.div`
-  padding: ${thm.sizeUnits(3)};
-`;
-
-const ProductHeader = styled(Heading)`
-  font-size: ${thm.fontSizes.gamma};
-  color: black;
-  font-weight: normal;
-`;
 
 const DesktopProductCard = ({ product }) => {
   const productUrl = `/p/${product.productId}/${product.slug}`;
