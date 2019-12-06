@@ -26,7 +26,6 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "cap-ui": "git+ssh://git@github.com/tehandyb/cap-ui.git#andrew-cap-194-sass-build",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "styled-components": "^3.4.2"

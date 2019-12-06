@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import thm from '../../../theme';
-import { Heading, thm } from 'cap-ui';
+// import { Heading, thm } from 'cap-ui';
 // import Link from '../../atoms/Link';
 // import Button from '../../atoms/Button';
 // import Thumbnail from '../../atoms/Thumbnail';
@@ -15,7 +14,7 @@ import { Heading, thm } from 'cap-ui';
 const ProductCardHeaderContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: ${thm.sizeUnits(3)} ${thm.sizeUnits(3)} 0px ${thm.sizeUnits(3)};
+  padding: 24px 24px 0px 24px;
 `;
 
 const ProductCardHeaderDetails = styled.div`
@@ -25,15 +24,15 @@ const ProductCardHeaderDetails = styled.div`
 `;
 
 const ProductCardInfo = styled.div`
-  background: ${thm.blankBackgroundColor};
+  background: #FFFFFF;
   border-style: solid;
   border-width: 1px;
-  border-color: ${thm.imagePlaceholderColor};
+  border-color: #B2CCDB;
   height: 100%;
 `;
 
 const ProductCardDescription = styled.div`
-  padding: ${thm.sizeUnits(3)};
+  padding: 24px;
 `;
 
 const ProductCardHeader = styled.div`
@@ -45,22 +44,24 @@ const ProductCardHeader = styled.div`
 const ProductCardHeaderBasicInfo = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-bottom: ${thm.sizeUnits(1)};
+  padding-bottom: 8px;
 `;
 
 const StarRatingContainer = styled.div`
-  margin-right: ${thm.sizeUnits(4)};
+  margin-right: 32px;
 `;
 
 
-const ProductHeader = styled(Heading)`
-  font-size: ${thm.fontSizes.gamma};
+const ProductHeader = styled.div`
+  font-size: 24px;
   color: black;
   font-weight: normal;
+  margin-top: 8px;
+  margin-bottom: 8px;
 `;
 
 const ProductThumbNailContainer = styled.div`
-  padding-right: ${thm.sizeUnits(3)};
+  padding-right: 24px;
 `;
 
 const ButtonContainer = styled.div`

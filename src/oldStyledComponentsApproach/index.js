@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ProductCard from './ProductCard';
 import nElements from '../numberOfTestElements';
+import './theme';
 
 const product = {
   productId: 1238,
