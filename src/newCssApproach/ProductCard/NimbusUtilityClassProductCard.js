@@ -11,7 +11,6 @@ import styled from 'styled-components';
 // This is a barebones version of the CapUI src/components/molecules/ProductCard/DesktopProductCard.js
 // This will not include anything that is not currently in the early version of the design token utility classes.
 // This is an effort to do an apples to apples performance comparison.
-import '../productCardUtilityClasses.scss';
 
 const DesktopProductCard = ({ product }) => {
   const productUrl = `/p/${product.productId}/${product.slug}`;

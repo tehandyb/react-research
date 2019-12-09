@@ -6,11 +6,15 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
     "build:prod": "NODE_ENV=production webpack --mode production",
+    "build:ssr": "npx babel src/ --out-dir ssrBuild --copy-files",
+    "generate-ssr-strings-old": "node ssrBuild/oldStyledComponentsApproach/SSRSimulation.js",
+    "generate-ssr-strings-new": "node ssrBuild/newCssApproach/SSRSimulation.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Capterra",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-styled-components": "~1.8.0",
