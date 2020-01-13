@@ -12,7 +12,7 @@ const product = {
   slug: "IFS-Manufacturing",
 };
 
-class App extends Component {
+class App extends Component  {
   render() {
     const testElements = [];
     for(let i = 0; i < nElements; i ++) {

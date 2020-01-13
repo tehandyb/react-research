@@ -4,11 +4,8 @@
   "description": "Basic environment for React, Babel, Sass, StyleComponents",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot",
-    "build:prod": "NODE_ENV=production webpack --mode production",
-    "build:ssr": "npx babel src/ --out-dir ssrBuild --copy-files",
-    "generate-ssr-strings-old": "node ssrBuild/oldStyledComponentsApproach/SSRSimulation.js",
-    "generate-ssr-strings-new": "node ssrBuild/newCssApproach/SSRSimulation.js",
+    "dev": "webpack-dev-server --config webpack.ssr.config.js --watch --mode development",
+    "build:prod": "NODE_ENV=production webpack --config webpack.ssr.config.js --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Capterra",

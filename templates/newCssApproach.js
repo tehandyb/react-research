@@ -1,3 +1,4 @@
+const template = (ssrString) => `
 <!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="en">
@@ -210,11 +211,16 @@
       color: #363A41;
     }
   </style>
+  <script src="./newCssApproach-bundle.js" defer="true"></script>
 </head>
 
 <body>
   <div id="root">
+    ${ssrString}
   </div>
 </body>
 
 </html>
+`;
+
+export default template;
