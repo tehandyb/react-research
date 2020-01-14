@@ -20,6 +20,7 @@ class App extends Component  {
     }
     return (
       <React.Fragment>
+        Number of test product cards: {nElements} 
         {testElements}
       </React.Fragment>
     );

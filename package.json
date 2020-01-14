@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.ssr.config.js --watch --mode development",
     "build:prod": "NODE_ENV=production webpack --config webpack.ssr.config.js --mode production",
+    "simpleServer": "cd build && python -m SimpleHTTPServer 8080",
+    "localTestEnv": "npm run build:prod && npm run simpleServer",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Capterra",

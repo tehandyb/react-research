@@ -16,7 +16,6 @@ module.exports = {
     path: path.join(__dirname, 'build'),
     filename: '[name].js'
   },
-  watch: true,
   module: {
     rules: [
       // We use raw-loader to load css as a string from cap-ui into inject_global
@@ -70,7 +69,7 @@ module.exports = {
     {
       apply: (compiler) => {
         compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
-          console.log("HIHIHIHI\n\nHIHIHIHI");
+          console.log("Built the SSR simulator");
           exec('node build/newCssApproachSSR.js && node build/oldStyledComponentsApproachSSR.js && webpack --config webpack.browser.config.js --mode production', (err, stdout, stderr) => {
             if (stdout) process.stdout.write(stdout);
             if (stderr) process.stderr.write(stderr);
