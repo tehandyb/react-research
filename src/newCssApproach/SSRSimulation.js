@@ -10,5 +10,5 @@ const htmlString = template(appString);
 fs.writeFile('build/newCssApproach.html', htmlString, (err) => {
   if (err) throw err;
 
-  console.log("Wrote HtmlString to /build/newCssApproach.html");
+  console.log("------------------\nWrote Html string that simulates SSR to /build/newCssApproach.html\n------------------");
 });

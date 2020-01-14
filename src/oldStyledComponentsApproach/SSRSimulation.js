@@ -13,5 +13,5 @@ const htmlString = template(styles, appString);
 fs.writeFile('build/oldStyledComponentsApproach.html', htmlString, (err) => {
   if (err) throw err;
 
-  console.log("Wrote Appstring to /build/oldStyledComponentsApproach.html");
+  console.log("-----------------\nWrote Html string that simulates SSR to /build/oldStyledComponentsApproach.html\n-------------------");
 });

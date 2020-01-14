@@ -69,7 +69,7 @@ module.exports = {
     {
       apply: (compiler) => {
         compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
-          console.log("Built the SSR simulator");
+          console.log("---------------------\nBuilt the HTML generator function(analagous to a AWS lambda function)\n------------------");
           exec('node build/newCssApproachSSR.js && node build/oldStyledComponentsApproachSSR.js && webpack --config webpack.browser.config.js --mode production', (err, stdout, stderr) => {
             if (stdout) process.stdout.write(stdout);
             if (stderr) process.stderr.write(stderr);
