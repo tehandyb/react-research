@@ -1,3 +1,3 @@
-const n = 500;
+const n = 1000;
 
 export default n;
