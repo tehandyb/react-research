@@ -3,13 +3,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  // Production profiling!
-  resolve: {
-    alias: {
-      'react-dom$': 'react-dom/profiling',
-      'scheduler/tracing': 'scheduler/tracing-profiling',
-    }
-  },
   // Tell webpack to begin building its 
   // dependency graph from this file.
   entry: {
